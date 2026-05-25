@@ -1,18 +1,18 @@
 ---
-title: "plasmaAnnotateR Overview"
+title: "MetaboResolveR Overview"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{plasmaAnnotateR Overview}
+  %\VignetteIndexEntry{MetaboResolveR Overview}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
-`plasmaAnnotateR` refines post-identification untargeted human plasma
+`MetaboResolveR` resolves post-identification untargeted human plasma
 metabolomics tables into evidence-scored annotation outputs. It is designed for
 reviewing LC-MS metabolite annotation exports, not for raw peak detection.
 
 ```{r setup}
-library(plasmaAnnotateR)
+library(MetaboResolveR)
 ```
 
 The main entry point is `annotate_plasma_metabolites()`.

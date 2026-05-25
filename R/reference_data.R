@@ -1,5 +1,5 @@
 load_reference_csv <- function(filename) {
-  path <- system.file("extdata", filename, package = "plasmaAnnotateR")
+  path <- system.file("extdata", filename, package = "MetaboResolveR")
   if (!nzchar(path)) {
     path <- file.path("inst", "extdata", filename)
   }

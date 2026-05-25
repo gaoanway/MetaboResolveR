@@ -13,7 +13,7 @@ annotation review, not to claim that every matched compound is biologically
 endogenous in every cohort.
 
 ```{r setup}
-library(plasmaAnnotateR)
+library(MetaboResolveR)
 ```
 
 The source catalog records provenance and update notes.

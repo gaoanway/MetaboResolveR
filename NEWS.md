@@ -1,4 +1,4 @@
-# plasmaAnnotateR 0.0.0.9000
+# MetaboResolveR 0.0.0.9000
 
 ## Phase 1 and Phase 2 local milestone
 

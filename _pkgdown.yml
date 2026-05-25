@@ -1,4 +1,4 @@
-url: https://gaoanway.github.io/plasmaAnnotateR/
+url: https://gaoanway.github.io/MetaboResolveR/
 
 template:
   bootstrap: 5
@@ -20,7 +20,7 @@ reference:
 articles:
   - title: Workflows
     contents:
-      - plasmaAnnotateR-mvp
-      - plasmaAnnotateR-real-case
+      - MetaboResolveR-mvp
+      - MetaboResolveR-real-case
       - plasma-reference-database
       - identifier-only-inputs

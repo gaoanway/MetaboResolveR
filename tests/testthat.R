@@ -1,4 +1,4 @@
 library(testthat)
-library(plasmaAnnotateR)
+library(MetaboResolveR)
 
-test_check("plasmaAnnotateR")
+test_check("MetaboResolveR")

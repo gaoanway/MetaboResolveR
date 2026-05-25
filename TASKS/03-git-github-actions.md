@@ -1,6 +1,6 @@
 # Phase 3 Task: Public GitHub And GitHub Actions
 
-**Goal:** Put `plasmaAnnotateR` into a public GitHub repository with clean
+**Goal:** Put `MetaboResolveR` into a public GitHub repository with clean
 history, safe ignores, and automated R package checks.
 
 **Repository Visibility Decision**
@@ -16,7 +16,7 @@ be committed.
 
 - [x] `.gitignore`
 - [x] Git repository initialized or cleaned.
-- [ ] Public GitHub repository.
+- [x] Public GitHub repository.
 - [x] `.github/workflows/R-CMD-check.yaml`
 - [x] Optional `.github/workflows/pkgdown.yaml`
 - [ ] First release tag after CI passes.
@@ -29,7 +29,7 @@ be committed.
   - `*.Rcheck/`
   - `..Rcheck/`
   - `.r-cache/`
-  - `plasmaAnnotateR_*.tar.gz`
+  - package tarballs.
   - local Excel files.
   - public raw files too large for normal GitHub storage.
 - [x] Check git status before adding files.
@@ -52,12 +52,12 @@ be committed.
   reference-data build scripts, and GitHub Actions workflows.
 - Ignored local-only files include the real-case workbook/chunks, R check
   outputs, package tarballs, cache files, and large raw zip archive.
-- Remote publication is waiting for a public GitHub repository that the GitHub
-  App can access.
+- Remote repository has been created as `gaoanway/MetaboResolveR`.
+- First push is pending until the package rename is verified locally.
 
 ## Suggested Commit Sequence
 
-- [x] `chore: initialize plasmaAnnotateR package with CI/CD`
+- [x] `chore: initialize MetaboResolveR package with CI/CD`
 
 ## Success Criteria
 

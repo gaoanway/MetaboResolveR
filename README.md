@@ -1,6 +1,6 @@
-# plasmaAnnotateR
+# MetaboResolveR
 
-`plasmaAnnotateR` refines post-identification untargeted human plasma
+`MetaboResolveR` resolves post-identification untargeted human plasma
 metabolomics tables into plasma-aware annotation outputs. It is built for
 LC-MS annotation review workflows where the input table already contains
 candidate metabolite names or database IDs.
@@ -8,7 +8,7 @@ candidate metabolite names or database IDs.
 ## Core Workflow
 
 ```r
-library(plasmaAnnotateR)
+library(MetaboResolveR)
 
 input <- data.frame(
   Name = c("Glucose", "Caffeine", "Unknown feature"),
@@ -28,7 +28,7 @@ After the public repository is created:
 
 ```r
 install.packages("remotes")
-remotes::install_github("gawxyz/plasmaAnnotateR")
+remotes::install_github("gaoanway/MetaboResolveR")
 ```
 
 ## What It Adds

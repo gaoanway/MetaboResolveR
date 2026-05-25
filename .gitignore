@@ -5,7 +5,7 @@
 .r-cache/
 *.Rcheck/
 ..Rcheck/
-plasmaAnnotateR_*.tar.gz
+*.tar.gz
 NEW_CHAT_PROMPT.md
 docs/superpowers/
 

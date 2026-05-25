@@ -1,6 +1,6 @@
 # Phase 1 Task: Local Real-Case Testing
 
-**Goal:** Validate `plasmaAnnotateR` on the real metabolite annotation
+**Goal:** Validate `MetaboResolveR` on the real metabolite annotation
 file and convert any real-world failures into package tests and fixes.
 
 **Observed Row Count:** The official `.xlsx` workbook currently reads as

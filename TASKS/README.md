@@ -2,7 +2,7 @@
 
 Updated: 2026-05-22
 
-This folder tracks the future development roadmap for `plasmaAnnotateR`.
+This folder tracks the future development roadmap for `MetaboResolveR`.
 
 ## Confirmed Decisions
 
@@ -37,6 +37,6 @@ flowchart TD
 - `pkgload::load_all("."); testthat::test_dir("tests/testthat")` passes.
 - `lintr::lint_package()` reports no lints.
 - `R CMD build .` succeeds.
-- `R CMD check --no-manual plasmaAnnotateR_*.tar.gz` returns `Status: OK`.
+- `R CMD check --no-manual MetaboResolveR_*.tar.gz` returns `Status: OK`.
 - Local-only real data stay outside git history.
 - Each completed phase writes a short changelog entry.

@@ -30,7 +30,7 @@ test_that("real-case schema can be annotated without an explicit column map", {
 })
 
 test_that("public real-case schema fixture remains readable", {
-  fixture <- system.file("extdata", "example_real_case_schema.csv", package = "plasmaAnnotateR")
+  fixture <- system.file("extdata", "example_real_case_schema.csv", package = "MetaboResolveR")
   expect_true(file.exists(fixture))
 
   input <- utils::read.csv(fixture, stringsAsFactors = FALSE, check.names = FALSE)

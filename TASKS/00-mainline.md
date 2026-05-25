@@ -1,6 +1,6 @@
 # Mainline Project Task
 
-**Goal:** Turn `plasmaAnnotateR` into a public, tested, documented, and
+**Goal:** Turn `MetaboResolveR` into a public, tested, documented, and
 publication-ready R package for human plasma untargeted metabolomics annotation
 review, with a manuscript aimed first at `Metabolism`.
 

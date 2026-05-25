@@ -8,11 +8,11 @@ vignette: >
 ---
 
 Some annotation exports contain database identifiers but no reliable compound
-name. `plasmaAnnotateR` accepts identifier-only rows and records which key
+name. `MetaboResolveR` accepts identifier-only rows and records which key
 matched the reference database.
 
 ```{r setup}
-library(plasmaAnnotateR)
+library(MetaboResolveR)
 ```
 
 HMDB/HMID, PubChem CID, ChEBI, and KEGG identifiers can be supplied without a

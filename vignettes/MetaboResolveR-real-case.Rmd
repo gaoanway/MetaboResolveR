@@ -12,7 +12,7 @@ This vignette mirrors its column structure with a small public synthetic
 fixture, so the workflow can be shared without exposing study data.
 
 ```{r setup}
-library(plasmaAnnotateR)
+library(MetaboResolveR)
 ```
 
 Read the synthetic fixture. Its columns follow the real vendor-style schema,
@@ -20,7 +20,7 @@ including `Name`, `HMDB_ID`, `KEGG_ID`, `Lipidmaps_ID`, `PubChemID`, `m/z`,
 `RT (min)`, `IonMode`, and `Score`.
 
 ```{r read-fixture}
-fixture <- system.file("extdata", "example_real_case_schema.csv", package = "plasmaAnnotateR")
+fixture <- system.file("extdata", "example_real_case_schema.csv", package = "MetaboResolveR")
 input <- read.csv(fixture, stringsAsFactors = FALSE, check.names = FALSE)
 names(input)
 ```

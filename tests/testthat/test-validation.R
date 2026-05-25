@@ -1,12 +1,12 @@
 test_that("validation requires at least one annotation identity column", {
   expect_error(
-    plasmaAnnotateR:::validate_annotation_table(data.frame(qc_rsd = 10)),
+    MetaboResolveR:::validate_annotation_table(data.frame(qc_rsd = 10)),
     "must contain at least one annotation identity column"
   )
 })
 
 test_that("validation standardizes common input columns", {
-  validated <- plasmaAnnotateR:::validate_annotation_table(
+  validated <- MetaboResolveR:::validate_annotation_table(
     data.frame(Metabolites = "Glucose", HMDB = "HMDB0000122", check.names = FALSE)
   )
 
@@ -16,7 +16,7 @@ test_that("validation standardizes common input columns", {
 })
 
 test_that("validation accepts common identifier-only aliases", {
-  validated <- plasmaAnnotateR:::validate_annotation_table(
+  validated <- MetaboResolveR:::validate_annotation_table(
     data.frame(
       HMID = "hmdb0000122",
       `PubChem CID` = "CID:1102",
@@ -33,7 +33,7 @@ test_that("validation accepts common identifier-only aliases", {
 })
 
 test_that("validation accepts real-case vendor-style column names", {
-  validated <- plasmaAnnotateR:::validate_annotation_table(
+  validated <- MetaboResolveR:::validate_annotation_table(
     data.frame(
       Name = "Glucose",
       HMDB_ID = "HMDB0000122",
@@ -59,7 +59,7 @@ test_that("validation accepts real-case vendor-style column names", {
 })
 
 test_that("placeholder identifiers do not count as structured IDs", {
-  validated <- plasmaAnnotateR:::validate_annotation_table(
+  validated <- MetaboResolveR:::validate_annotation_table(
     data.frame(
       Name = "Unknown feature",
       HMDB_ID = "-",
@@ -71,5 +71,5 @@ test_that("placeholder identifiers do not count as structured IDs", {
   )
 
   expect_true(all(is.na(validated[c("hmdb_id", "kegg_id", "lipidmaps_id", "pubchem_cid")])))
-  expect_identical(plasmaAnnotateR:::score_annotation_evidence(validated), 0L)
+  expect_identical(MetaboResolveR:::score_annotation_evidence(validated), 0L)
 })

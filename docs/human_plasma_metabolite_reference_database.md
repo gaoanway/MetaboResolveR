@@ -3,7 +3,7 @@
 Updated: 2026-05-18
 
 This document defines the source hierarchy, evidence rules, and generated
-tables used by `plasmaAnnotateR` for human plasma untargeted metabolomics
+tables used by `MetaboResolveR` for human plasma untargeted metabolomics
 annotation review.
 
 ## Goal

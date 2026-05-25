@@ -7,7 +7,7 @@ developers through proper function documentation and narrative vignettes.
 
 - [x] Roxygen-style documentation comments for every exported function.
 - [x] Dedicated `man/*.Rd` help pages generated from roxygen.
-- [x] `vignettes/plasmaAnnotateR-real-case.Rmd`
+- [x] `vignettes/MetaboResolveR-real-case.Rmd`
 - [x] `vignettes/plasma-reference-database.Rmd`
 - [x] `vignettes/identifier-only-inputs.Rmd`
 - [x] Optional `_pkgdown.yml`
