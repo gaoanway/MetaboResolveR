@@ -56,6 +56,8 @@ be committed.
 - Local `main` has been pushed to `gaoanway/MetaboResolveR`.
 - GitHub Actions run 2 passed for both `R-CMD-check` and `pkgdown`.
 - The `gh-pages` branch contains the generated pkgdown site.
+- The public Pages URL may require enabling GitHub Pages source to
+  `gh-pages` / root once in repository settings.
 
 ## Suggested Commit Sequence
 
@@ -68,3 +70,4 @@ be committed.
 - No private real data are present in repository history.
 - A collaborator can install from GitHub and run basic examples.
 - Release tag remains pending until the package version is finalized.
+- Public pkgdown URL should be rechecked after Pages source is enabled.
