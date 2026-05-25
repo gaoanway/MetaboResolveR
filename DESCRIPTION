@@ -13,6 +13,9 @@ Description: Resolves post-identification untargeted human plasma metabolomics
     evidence, identifier-aware matching, exogenous flagging, conservative lipid
     handling, and transparent confidence classes.
 License: MIT + file LICENSE
+URL: https://gaoanway.github.io/MetaboResolveR/,
+    https://github.com/gaoanway/MetaboResolveR
+BugReports: https://github.com/gaoanway/MetaboResolveR/issues
 Encoding: UTF-8
 Suggests:
     testthat (>= 3.0.0),
