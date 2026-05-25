@@ -8,6 +8,7 @@
 *.tar.gz
 NEW_CHAT_PROMPT.md
 docs/superpowers/
+pkgdown-site/
 
 # Local-only real study data and derived annotation outputs.
 data-raw/real_case/

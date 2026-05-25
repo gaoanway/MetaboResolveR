@@ -8,4 +8,5 @@
 ^.*[.]tar[.]gz$
 ^data-raw$
 ^docs/superpowers$
+^pkgdown-site$
 ^NEW_CHAT_PROMPT\.md$
