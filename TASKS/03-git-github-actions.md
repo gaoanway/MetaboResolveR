@@ -32,9 +32,9 @@ be committed.
   - `plasmaAnnotateR_*.tar.gz`
   - local Excel files.
   - public raw files too large for normal GitHub storage.
-- [ ] Check git status before adding files.
-- [ ] Confirm no private real file appears in `git status`.
-- [ ] Confirm no private real file appears in `git log --stat` before push.
+- [x] Check git status before adding files.
+- [x] Confirm no private real file appears in `git status`.
+- [x] Confirm no private real file appears in `git log --stat` before push.
 
 ## GitHub Actions Plan
 
@@ -46,13 +46,18 @@ be committed.
 - [ ] Confirm CI passes on GitHub.
 - [ ] Confirm pkgdown deploys to `gh-pages`.
 
+## Current Status
+
+- Local `main` has been committed with package source, documentation, tests,
+  reference-data build scripts, and GitHub Actions workflows.
+- Ignored local-only files include the real-case workbook/chunks, R check
+  outputs, package tarballs, cache files, and large raw zip archive.
+- Remote publication is waiting for a public GitHub repository that the GitHub
+  App can access.
+
 ## Suggested Commit Sequence
 
-- [ ] `chore: initialize package repository hygiene`
-- [ ] `test: add real-case schema validation plan`
-- [ ] `docs: add plasma reference database documentation`
-- [ ] `ci: add R CMD check workflow`
-- [ ] `docs: add package usage vignettes`
+- [x] `chore: initialize plasmaAnnotateR package with CI/CD`
 
 ## Success Criteria
 
