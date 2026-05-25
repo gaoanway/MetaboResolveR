@@ -6,11 +6,21 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   pkgdown:
     runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
@@ -35,8 +45,14 @@ jobs:
         run: pkgdown::build_site_github_pages(new_process = FALSE, install = TRUE, dest_dir = "pkgdown-site")
         shell: Rscript {0}
 
-      - name: Deploy pkgdown site
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload pkgdown site artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          branch: gh-pages
-          folder: pkgdown-site
+          path: pkgdown-site
+
+      - name: Deploy pkgdown site
+        id: deployment
+        uses: actions/deploy-pages@v4
