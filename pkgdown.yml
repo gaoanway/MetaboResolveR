@@ -1,0 +1,12 @@
+pandoc: 3.8.3
+pkgdown: 2.2.0
+pkgdown_sha: ~
+articles:
+  identifier-only-inputs: identifier-only-inputs.html
+  MetaboResolveR-mvp: MetaboResolveR-mvp.html
+  MetaboResolveR-real-case: MetaboResolveR-real-case.html
+  plasma-reference-database: plasma-reference-database.html
+last_built: 2026-05-25T09:25Z
+urls:
+  reference: https://gaoanway.github.io/MetaboResolveR/reference
+  article: https://gaoanway.github.io/MetaboResolveR/articles
