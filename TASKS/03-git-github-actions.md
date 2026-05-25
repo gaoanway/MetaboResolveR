@@ -19,7 +19,7 @@ be committed.
 - [x] Public GitHub repository.
 - [x] `.github/workflows/R-CMD-check.yaml`
 - [x] Optional `.github/workflows/pkgdown.yaml`
-- [ ] First release tag after CI passes.
+- [ ] First release tag after version decision.
 
 ## Git Safety Checklist
 
@@ -43,8 +43,8 @@ be committed.
 - [x] Run `rcmdcheck::rcmdcheck(args = "--no-manual")`.
 - [x] Cache R packages.
 - [x] Run on `push` and `pull_request`.
-- [ ] Confirm CI passes on GitHub.
-- [ ] Confirm pkgdown deploys to `gh-pages`.
+- [x] Confirm CI passes on GitHub.
+- [x] Confirm pkgdown deploys to `gh-pages`.
 
 ## Current Status
 
@@ -53,7 +53,9 @@ be committed.
 - Ignored local-only files include the real-case workbook/chunks, R check
   outputs, package tarballs, cache files, and large raw zip archive.
 - Remote repository has been created as `gaoanway/MetaboResolveR`.
-- First push is pending until the package rename is verified locally.
+- Local `main` has been pushed to `gaoanway/MetaboResolveR`.
+- GitHub Actions run 2 passed for both `R-CMD-check` and `pkgdown`.
+- The `gh-pages` branch contains the generated pkgdown site.
 
 ## Suggested Commit Sequence
 
@@ -65,3 +67,4 @@ be committed.
 - GitHub Actions pass.
 - No private real data are present in repository history.
 - A collaborator can install from GitHub and run basic examples.
+- Release tag remains pending until the package version is finalized.

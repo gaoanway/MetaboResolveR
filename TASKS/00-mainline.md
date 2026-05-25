@@ -34,12 +34,12 @@ review, with a manuscript aimed first at `Metabolism`.
   - Write a reference-database vignette.
   - Write an identifier-only-input vignette.
 
-- [ ] **M4: Public GitHub repository established**
+- [x] **M4: Public GitHub repository established**
   - [x] Initialize git if not already initialized.
   - [x] Add `.gitignore` before any commit.
-  - [ ] Push package source to a public GitHub repository.
+  - [x] Push package source to a public GitHub repository.
   - [x] Add GitHub Actions R CMD check.
-  - [ ] Confirm Actions pass.
+  - [x] Confirm Actions pass.
 
 - [ ] **M5: Metabolism manuscript drafted**
   - Choose a biological story around human plasma metabolite annotation quality.
