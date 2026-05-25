@@ -1,0 +1,7 @@
+normalized_name,flag_category,source_db,default_penalty,note
+caffeine,dietary,BloodExposome,2,Common dietary xanthine.
+acetaminophen,drug,DrugBank,3,Common pharmaceutical exposure.
+bisphenol a,pollutant,T3DB,3,Environmental contaminant with possible technical carryover.
+diethyl phthalate,technical_contaminant,T3DB,4,Plasticizer signal often treated as contamination.
+ergothioneine,dietary,FooDB,1,Diet-derived food component that circulates in blood.
+

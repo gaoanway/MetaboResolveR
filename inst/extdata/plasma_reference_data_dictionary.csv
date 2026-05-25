@@ -1,0 +1,23 @@
+field,meaning
+normalized_name,Lowercase normalized lookup key used for name joins.
+metabolite_name,Preferred display name from HMDB/Serum Metabolome or Ghosh 2024.
+hmdb_id,HMDB accession when available from Serum Metabolome XML.
+pubchem_cid,PubChem Compound ID from HMDB/Serum Metabolome when available.
+chebi_id,ChEBI identifier from HMDB/Serum Metabolome when available.
+kegg_id,KEGG compound identifier from HMDB/Serum Metabolome when available.
+formula,Chemical formula from HMDB when available.
+monoisotopic_molecular_weight,Monoisotopic molecular weight from HMDB when available.
+inchikey,InChIKey from HMDB when available.
+biospecimen_locations,HMDB/Serum Metabolome biospecimen locations.
+normal_*_concentration_count,Number of normal concentration entries by biospecimen type.
+ghosh_*,Fields extracted from Ghosh 2024 Supplementary Table 1.
+srm1950_*,Fields extracted from SRM1950-DB 2025 CSV.
+ghosh_all5_cohorts,TRUE if the metabolite was present in all five Ghosh 2024 cohorts.
+ghosh_core_50pct,TRUE if present in all five cohorts and max missingness <=50%.
+source_*,Boolean source-hit flags for provenance.
+plasma_benchmark,Manual or imported Plasma Benchmark evidence flag; currently only seed overrides are marked.
+nist_srm1950,Manual or imported NIST SRM 1950 evidence flag; currently only seed overrides are marked.
+hmdb_biofluid,TRUE if Serum Metabolome/HMDB biofluid support is available.
+serum_evidence,TRUE if serum/blood compendium support is available.
+source_count,Number of imported/curated evidence sources supporting the row.
+evidence_tier,Operational plasma-reference confidence tier used by the package.

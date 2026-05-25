@@ -1,0 +1,52 @@
+---
+title: "Real-Case Workflow With a Public Synthetic Fixture"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Real-Case Workflow With a Public Synthetic Fixture}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+The private SD rhythm plasma metabolomics workbook is validated locally only.
+This vignette mirrors its column structure with a small public synthetic
+fixture, so the workflow can be shared without exposing study data.
+
+```{r setup}
+library(plasmaAnnotateR)
+```
+
+Read the synthetic fixture. Its columns follow the real vendor-style schema,
+including `Name`, `HMDB_ID`, `KEGG_ID`, `Lipidmaps_ID`, `PubChemID`, `m/z`,
+`RT (min)`, `IonMode`, and `Score`.
+
+```{r read-fixture}
+fixture <- system.file("extdata", "example_real_case_schema.csv", package = "plasmaAnnotateR")
+input <- read.csv(fixture, stringsAsFactors = FALSE, check.names = FALSE)
+names(input)
+```
+
+No explicit `column_map` is required for these aliases.
+
+```{r annotate-fixture}
+annotated <- annotate_plasma_metabolites(input)
+annotated[, c(
+  "Compound_ID",
+  "metabolite_name",
+  "hmdb_id",
+  "pubchem_cid",
+  "matched_reference_key",
+  "plasma_evidence_sources",
+  "final_annotation_class"
+)]
+```
+
+For the private workbook, the local-only scripts under
+`data-raw/real_case/` split the `.xlsx` file into ten CSV chunks, annotate each
+chunk, and write summary tables:
+
+```{r local-real-case, eval = FALSE}
+source("data-raw/real_case/split_real_case.R")
+source("data-raw/real_case/run_real_case_validation.R")
+```
+
+Those outputs stay outside the public repository.

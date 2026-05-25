@@ -1,0 +1,45 @@
+---
+title: "Identifier-Only Inputs"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Identifier-Only Inputs}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+Some annotation exports contain database identifiers but no reliable compound
+name. `plasmaAnnotateR` accepts identifier-only rows and records which key
+matched the reference database.
+
+```{r setup}
+library(plasmaAnnotateR)
+```
+
+HMDB/HMID, PubChem CID, ChEBI, and KEGG identifiers can be supplied without a
+name. Placeholder values such as `-`, `N/A`, and empty strings are treated as
+missing.
+
+```{r id-only}
+input <- data.frame(
+  HMID = c("HMDB0000122", "-"),
+  `PubChem CID` = c(NA, "2519"),
+  `ChEBI ID` = c(NA, NA),
+  KEGG = c("C00031", NA),
+  check.names = FALSE
+)
+
+annotated <- annotate_plasma_metabolites(input)
+annotated[, c(
+  "metabolite_name",
+  "hmdb_id",
+  "pubchem_cid",
+  "kegg_id",
+  "matched_reference_key",
+  "reference_metabolite_name",
+  "final_annotation_class"
+)]
+```
+
+If multiple identifiers are present, matching prioritizes structured database
+IDs before falling back to normalized names. This makes identifier-only inputs
+auditable and avoids forcing users to invent names for uncertain annotations.

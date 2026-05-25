@@ -1,0 +1,7 @@
+normalized_name,hmdb_id,plasma_benchmark,nist_srm1950,hmdb_biofluid,serum_evidence,endogenous_hint,lipid_class,manual_notes
+glucose,HMDB0000122,TRUE,TRUE,TRUE,TRUE,TRUE,,MVP seed retained from package scaffold; common endogenous plasma metabolite.
+lactate,HMDB0000190,TRUE,TRUE,TRUE,TRUE,TRUE,,MVP seed retained from package scaffold; common endogenous plasma metabolite.
+carnitine,HMDB0000062,TRUE,TRUE,TRUE,TRUE,TRUE,,MVP seed retained from package scaffold; common endogenous plasma metabolite.
+pc(34:2),,TRUE,TRUE,TRUE,TRUE,TRUE,PC,MVP seed retained from package scaffold; lipid sum-composition example.
+lpc(18:2),,TRUE,TRUE,TRUE,TRUE,TRUE,LPC,MVP seed retained from package scaffold; lysophospholipid example.
+creatinine,HMDB0000562,TRUE,TRUE,TRUE,TRUE,TRUE,,MVP seed retained from package scaffold; common endogenous plasma metabolite.

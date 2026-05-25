@@ -1,0 +1,24 @@
+Package: plasmaAnnotateR
+Type: Package
+Title: Human Plasma Metabolomics Annotation Refinement
+Version: 0.0.0.9000
+Authors@R: c(
+    person("OpenAI", "Codex", email = "support@openai.com", role = c("aut", "cre"))
+    )
+Author: OpenAI Codex [aut, cre]
+Maintainer: OpenAI Codex <support@openai.com>
+Description: Refines post-identification untargeted human plasma metabolomics
+    tables into plasma-aware, evidence-scored annotation outputs. The package
+    is designed for LC-MS annotation review workflows and emphasizes plasma
+    evidence, exogenous flagging, conservative lipid handling, and transparent
+    confidence classes.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Suggests:
+    testthat (>= 3.0.0),
+    knitr,
+    rmarkdown,
+    tibble
+VignetteBuilder: knitr
+Config/testthat/edition: 3
+RoxygenNote: 7.3.3

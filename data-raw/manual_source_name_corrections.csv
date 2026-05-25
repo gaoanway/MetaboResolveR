@@ -1,0 +1,3 @@
+source_id,hmdb_id,original_name,corrected_name,reason,evidence_url
+srm1950_db_2025,HMDB0000506,λ-muricholic acid,alpha-Muricholic acid,SRM1950 source name appears to contain a corrupted Greek-letter prefix; HMDB accession resolves to alpha-Muricholic acid,https://hmdb.ca/metabolites/HMDB0000506
+srm1950_db_2025,HMDB0244296,Ш-cholic acid,7-Methyl-cholic acid,SRM1950 source name appears to contain a corrupted non-Latin prefix; HMDB/Serum Metabolome accession resolves to 7-Methyl-cholic acid,https://hmdb.ca/metabolites/HMDB0244296

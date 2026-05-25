@@ -1,0 +1,60 @@
+---
+title: "Human Plasma Reference Database"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Human Plasma Reference Database}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+The bundled reference database combines metabolite evidence from curated
+plasma, serum, and reference-material sources. It is meant to support
+annotation review, not to claim that every matched compound is biologically
+endogenous in every cohort.
+
+```{r setup}
+library(plasmaAnnotateR)
+```
+
+The source catalog records provenance and update notes.
+
+```{r source-catalog}
+catalog <- load_reference_source_catalog()
+catalog[, c("source_id", "short_name", "source_kind", "evidence_role")]
+```
+
+The full evidence table keeps source-specific flags and identifiers.
+
+```{r evidence-table}
+reference <- load_plasma_metabolite_evidence_reference()
+dim(reference)
+names(reference)
+```
+
+The current evidence hierarchy is:
+
+- Gold or core plasma evidence: curated plasma benchmark records, NIST SRM1950,
+  and metabolites supported by strong cross-cohort plasma evidence.
+- Strong supporting evidence: HMDB biofluid annotations and serum evidence.
+- Contextual evidence: single-source or lower-reproducibility plasma evidence.
+
+Identifier matching is intentionally transparent. Annotation rows can match by
+HMDB/HMID, PubChem CID, ChEBI, KEGG, or normalized name, and the output column
+`matched_reference_key` records which key was used.
+
+```{r identifier-audit}
+input <- data.frame(
+  metabolite_name = c(NA, NA),
+  hmdb_id = c("HMDB0000122", NA),
+  pubchem_cid = c(NA, "2519"),
+  stringsAsFactors = FALSE
+)
+
+score_plasma_evidence(input)[, c(
+  "hmdb_id",
+  "pubchem_cid",
+  "matched_reference_key",
+  "reference_metabolite_name",
+  "plasma_evidence_sources"
+)]
+```

@@ -1,0 +1,26 @@
+url: https://gaoanway.github.io/plasmaAnnotateR/
+
+template:
+  bootstrap: 5
+reference:
+  - title: Annotation workflow
+    contents:
+      - annotate_plasma_metabolites
+      - export_annotation_report
+  - title: Evidence and confidence
+    contents:
+      - score_plasma_evidence
+      - classify_annotation_confidence
+      - flag_exogenous_compounds
+      - normalize_lipid_annotation
+  - title: Reference data
+    contents:
+      - load_plasma_metabolite_evidence_reference
+      - load_reference_source_catalog
+articles:
+  - title: Workflows
+    contents:
+      - plasmaAnnotateR-mvp
+      - plasmaAnnotateR-real-case
+      - plasma-reference-database
+      - identifier-only-inputs

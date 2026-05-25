@@ -1,0 +1,19 @@
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+.r-cache/
+*.Rcheck/
+..Rcheck/
+plasmaAnnotateR_*.tar.gz
+NEW_CHAT_PROMPT.md
+docs/superpowers/
+
+# Local-only real study data and derived annotation outputs.
+data-raw/real_case/
+
+# Public but too large for normal GitHub storage; re-download when rebuilding.
+data-raw/serum_metabolites.zip
+
+# Guard against accidentally copying the private real workbook into the repo.
+meta_intensity_all_hmdb_kegg_lipidmaps.xls*

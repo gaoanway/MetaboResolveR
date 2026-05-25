@@ -1,0 +1,34 @@
+---
+title: "plasmaAnnotateR Overview"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{plasmaAnnotateR Overview}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+`plasmaAnnotateR` refines post-identification untargeted human plasma
+metabolomics tables into evidence-scored annotation outputs. It is designed for
+reviewing LC-MS metabolite annotation exports, not for raw peak detection.
+
+```{r setup}
+library(plasmaAnnotateR)
+```
+
+The main entry point is `annotate_plasma_metabolites()`.
+
+```{r overview-example}
+input <- data.frame(
+  Name = c("Glucose", "Caffeine", "Unknown feature"),
+  HMDB_ID = c("HMDB0000122", "HMDB0001847", "-"),
+  PubChemID = c("5793", "2519", "-"),
+  Score = c(0.95, 0.88, 0.50),
+  check.names = FALSE
+)
+
+annotated <- annotate_plasma_metabolites(input)
+annotated[, c("metabolite_name", "matched_reference_key", "final_annotation_class")]
+```
+
+Use `export_annotation_report()` when you want a CSV annotation table plus a
+compact final-class summary.

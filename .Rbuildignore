@@ -1,0 +1,11 @@
+^\.lintr$
+^\.github$
+^\.r-cache$
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.\.Rcheck$
+^.*[.]Rcheck$
+^plasmaAnnotateR_.*[.]tar[.]gz$
+^data-raw$
+^docs/superpowers$
+^NEW_CHAT_PROMPT\.md$

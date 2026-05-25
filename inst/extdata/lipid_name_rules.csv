@@ -1,0 +1,10 @@
+pattern,normalized_class,default_level
+^PC\\(,PC,sum_composition
+^PE\\(,PE,sum_composition
+^LPC\\(,LPC,molecular_species
+^LPE\\(,LPE,molecular_species
+^TG\\(,TG,sum_composition
+^DG\\(,DG,sum_composition
+^Cer\\(,Cer,sum_composition
+^SM\\(,SM,sum_composition
+
